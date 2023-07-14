@@ -5,6 +5,8 @@ from sklearn.preprocessing import MultiLabelBinarizer, StandardScaler
 from sklearn.neural_network import MLPRegressor
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 movies_df = pd.read_csv('movies.csv', sep='::', engine='python', header=None, names=['movieId', 'title', 'genre'], encoding='latin-1')
 ratings_df = pd.read_csv('ratings.csv', sep='::', engine='python', header=None, names=['userId', 'movieId', 'rating', 'timestamp'], encoding='latin-1')
